@@ -18,7 +18,9 @@ function Adminlogin(){
    }
     // create code for calling api and api will return true
     // login successful
-    fetch("http://localhost:8000/adminlogin", {
+    //fetch("http://localhost:8000/adminlogin", {
+        fetch("https://pizza-backend-2mtc.onrender.com/adminlogin", {
+
       method: "POST",
       body: JSON.stringify(senddata),
       headers: { "Content-Type": "application/json" }

@@ -14,7 +14,8 @@ function Createaccount(){
       address: formData.get("address")
     }
         // create code for calling api and api will return registration successfull
-      fetch("http://localhost:8000/Createaccount", {
+     fetch("https://pizza-backend-2mtc.onrender.com/Createaccount", {
+
       method: "POST",
       body: JSON.stringify(senddata),
       headers: { "Content-Type": "application/json" }

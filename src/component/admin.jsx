@@ -8,7 +8,9 @@ function Admin(){
 function fetchData(){
     console.log("fetching data");
     //call api and will receive all order
-     fetch("http://localhost:8000/getorders")
+    fetch("https://pizza-backend-2mtc.onrender.com/getorders")
+
+     //fetch("http://localhost:8000/getorders")
      .then((res)=>res.json())
      .then((mydata)=>setdata(mydata))
      .catch((err)=>console.log(err))

@@ -105,7 +105,9 @@ function Mycart() {
     }
 
     // Create payment order on backend
-    const paymentOrder = await fetch("http://localhost:8000/create-payment", {
+    const paymentOrder = await fetch("https://pizza-backend-2mtc.onrender.com/create-payment", {
+
+    //const paymentOrder = await fetch("http://localhost:8000/create-payment", {
       method: "POST",
       body: JSON.stringify({ amount: user.totalamount }),
       headers: { "Content-Type": "application/json" }
@@ -121,7 +123,9 @@ function Mycart() {
 
       handler: function (response) {
         // Payment Success → Now place order in DB
-        fetch("http://localhost:8000/placeorder", {
+        fetch("https://pizza-backend-2mtc.onrender.com/placeorder", {
+
+       // fetch("http://localhost:8000/placeorder", {
           method: "POST",
           body: JSON.stringify(user),
           headers: { "Content-Type": "application/json" }

@@ -21,7 +21,8 @@ const [k,updatek]=useState("");
                
         
     // create code for  calling api and api will return ,userid,useaddress
-     fetch("http://localhost:8000/checklogin", {
+     fetch("https://pizza-backend-2mtc.onrender.com/checklogin", {
+
       method: "POST",
       body: JSON.stringify(senddata),
       headers: { "Content-Type": "application/json" }
